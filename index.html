@@ -7,26 +7,65 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <title>React Redux App</title>
 </head>
 <body>
   <div id="app"></div>
   <script type=text/babel>
     class App extends React.Component {
 
+
       state = {
         name: "Rohito",
         age : 29
       }
 
+
+
+      handleClick = () => {
+
+        this.setState({
+          name: "Bhambhani"
+        })
+      }
+
+      handleCopy(){
+        console.log("Be Original")
+      }
+
+      firstnameChange(){
+        console.log("Typing...")
+      }
       render(){
         return (
-                  <div>
-                    Hello From React! <br/>
 
-                  <p>My name is {this.state.name}. </p>
-                  <p>My age is {this.state.age}. </p>
-                  </div>
+
+                <div>
+                  <form action="/action_page.php">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name.." onChange={this.firstnameChange}/>
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name.." onChange={this.lastnameChange}/>
+
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                    </select>
+
+                    <input type="submit" value="Submit"/>
+
+                  </form>
+
+                  <input type="text" id="fname" name="firstname" value={this.state.firstname}/>
+                  <input type="text" id="lname" name="lastname" value={this.state.lastname}/>
+
+
+                </div>
+
         )
       }
     }
