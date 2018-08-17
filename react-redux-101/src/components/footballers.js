@@ -11,11 +11,16 @@ const FootBallers = ({soccerPlayers}) => {
         <th>Club</th>
       </tr>
      {soccerPlayers.map( (player) => {
-      return  <tr key={player.id}>
-                <td >{player.name}</td>
-                <td >{player.position}</td>
-                <td >{player.club}</td>
-                </tr>
+       return player.club == "Manchester United" ? (
+           <tr key={player.id}>
+                   <td >{player.name}</td>
+                   <td >{player.position}</td>
+                   <td >{player.club}</td>
+                   </tr>
+
+       ) : null
+
+
     })}
     </tbody>
   </table>
