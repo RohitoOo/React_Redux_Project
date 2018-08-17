@@ -1,6 +1,20 @@
 import React from 'react';
 
 const FootBallers = ({soccerPlayers}) => {
+
+
+  const players = soccerPlayers.map( (player) => {
+    return  (
+
+        <tr key={player.id}>
+            <td >{player.name}</td>
+            <td >{player.position}</td>
+            <td >{player.club}</td>
+        </tr>
+
+    )
+ })
+
   return (
   <div>
     <table>
@@ -10,18 +24,7 @@ const FootBallers = ({soccerPlayers}) => {
         <th>Position</th>
         <th>Club</th>
       </tr>
-     {soccerPlayers.map( (player) => {
-       return player.club == "Manchester United" ? (
-           <tr key={player.id}>
-                   <td >{player.name}</td>
-                   <td >{player.position}</td>
-                   <td >{player.club}</td>
-                   </tr>
-
-       ) : null
-
-
-    })}
+          { players }
     </tbody>
   </table>
   </div>
