@@ -18,15 +18,16 @@
 
       state = {
         name: "Rohito",
-        age : 29
+        age : 29,
+        firstname: "Test",
+        lastname: ""
       }
 
 
 
       handleClick = () => {
-
         this.setState({
-          name: "Bhambhani"
+          name: "Bhambhani",
         })
       }
 
@@ -34,9 +35,18 @@
         console.log("Be Original")
       }
 
-      firstnameChange(){
-        console.log("Typing...")
+      firstnameChange = (e) => {
+        this.setState({
+          firstname: e.target.value,
+        })
       }
+
+      lastnameChange = (e) => {
+        this.setState({
+          lastname: e.target.value,
+        })
+      }
+
       render(){
         return (
 
@@ -55,12 +65,11 @@
                       <option value="canada">Canada</option>
                       <option value="usa">USA</option>
                     </select>
-
-                    <input type="submit" value="Submit"/>
-
                   </form>
-
+                  <label for="fname">First Name Copy</label>
                   <input type="text" id="fname" name="firstname" value={this.state.firstname}/>
+
+                  <label for="fname">Last Name Copy</label>
                   <input type="text" id="lname" name="lastname" value={this.state.lastname}/>
 
 
