@@ -13,10 +13,19 @@
   <div id="app"></div>
   <script type=text/babel>
     class App extends React.Component {
+
+      state = {
+        name: "Rohito",
+        age : 29
+      }
+
       render(){
         return (
                   <div>
-                    Hello From React! {console.log (Date()) }
+                    Hello From React! <br/>
+
+                  <p>My name is {this.state.name}. </p>
+                  <p>My age is {this.state.age}. </p>
                   </div>
         )
       }
