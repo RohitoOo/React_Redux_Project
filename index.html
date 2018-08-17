@@ -11,7 +11,12 @@
   <title>React Redux App</title>
 </head>
 <body>
-  <div id="app"></div>
+
+  <div>
+    <h1>React Dynamic Form</h1>
+    <div id="app"></div>
+  </div>
+
   <script type=text/babel>
     class App extends React.Component {
 
@@ -19,7 +24,7 @@
       state = {
         name: "Rohito",
         age : 29,
-        firstname: "Test",
+        firstname: "",
         lastname: ""
       }
 
@@ -49,30 +54,23 @@
 
       render(){
         return (
-
-
                 <div>
                   <form action="/action_page.php">
                     <label >First Name</label>
                     <input type="text" id="fname" name="firstname" placeholder="Your name.." onChange={this.firstnameChange}/>
-
                     <label >Last Name</label>
                     <input type="text" id="lname" name="lastname" placeholder="Your last name.." onChange={this.lastnameChange}/>
-
                     <label >Country</label>
                     <select id="country" name="country">
-                      <option value="australia">Australia</option>
                       <option value="canada">Canada</option>
+                      <option value="australia">Australia</option>
                       <option value="usa">USA</option>
                     </select>
-                  </form>
-                  <label >First Name Copy</label>
+                  </form><br/>
+                  <label >First Name [Read Only]</label>
                   <input type="text" id="fname" name="firstname" value={this.state.firstname} readOnly/>
-
-                  <label >Last Name Copy</label>
+                  <label >Last Name [Read Only]</label>
                   <input type="text" id="lname" name="lastname" value={this.state.lastname} readOnly/>
-
-
                 </div>
 
         )
