@@ -53,24 +53,24 @@
 
                 <div>
                   <form action="/action_page.php">
-                    <label for="fname">First Name</label>
+                    <label >First Name</label>
                     <input type="text" id="fname" name="firstname" placeholder="Your name.." onChange={this.firstnameChange}/>
 
-                    <label for="lname">Last Name</label>
+                    <label >Last Name</label>
                     <input type="text" id="lname" name="lastname" placeholder="Your last name.." onChange={this.lastnameChange}/>
 
-                    <label for="country">Country</label>
+                    <label >Country</label>
                     <select id="country" name="country">
                       <option value="australia">Australia</option>
                       <option value="canada">Canada</option>
                       <option value="usa">USA</option>
                     </select>
                   </form>
-                  <label for="fname">First Name Copy</label>
-                  <input type="text" id="fname" name="firstname" value={this.state.firstname}/>
+                  <label >First Name Copy</label>
+                  <input type="text" id="fname" name="firstname" value={this.state.firstname} readOnly/>
 
-                  <label for="fname">Last Name Copy</label>
-                  <input type="text" id="lname" name="lastname" value={this.state.lastname}/>
+                  <label >Last Name Copy</label>
+                  <input type="text" id="lname" name="lastname" value={this.state.lastname} readOnly/>
 
 
                 </div>
