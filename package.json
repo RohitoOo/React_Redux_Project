@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-      "start": "npm start --prefix react-redux-101",
+      "start": "cd react-redux-101 && npm start",
   },
-  "author": "",
+  "author": "Rohit Bhambhani",
   "license": "ISC"
 }
