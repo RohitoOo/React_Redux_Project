@@ -1,5 +1,5 @@
-input[type=text], select , button {
-    width: 100%;
+input[type=text], select , #button {
+    width: 96%;
     padding: 12px 20px;
     margin: 8px 20px;
     border: 1px solid #ccc;
@@ -31,11 +31,11 @@ h1{
   text-align: center;
 }
 
-button:active{
+#button:active{
     background:#ccc;
 }
 
-button:hover {
+#button:hover {
   background: #47CD85;
   transition: .5s;
 }

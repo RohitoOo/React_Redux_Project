@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import FootBallers from './components/footballers'
+import FootBallers from './components/Footballers'
 import AddPlayer from './components/AddPlayer'
 
 import "./static/styles.css"
@@ -14,6 +14,28 @@ class App extends Component {
       {id: 3,name: "Sergio Ramos" , position: "Center Back" , club: "Real Madrid"},
     ]
   }
+
+  handleDelete = (id) => {
+
+    var soccerPlayers = this.state.soccerPlayers
+
+    // console.log(soccerPlayers)
+
+    soccerPlayers = soccerPlayers.filter( (eachPlayer) => {
+      eachPlayer.id = eachPlayer.id.toString()
+
+      return eachPlayer.id !== id
+
+    } )
+
+      this.setState({
+        soccerPlayers : soccerPlayers
+      })
+
+  }
+
+
+
 
    handleSubmit = (e) => {
      e.preventDefault()
@@ -39,14 +61,15 @@ class App extends Component {
 
   }
 
+
   render() {
     return (
-      <div className="App" style={{textAlign : 'center'}}>
+      <div className="App">
         <header className="App-header">
           <h1 className="App-title">Create Your Dream Team [React App] </h1>
         </header>
-        <FootBallers soccerPlayers={this.state.soccerPlayers} />
-        <AddPlayer  abc={"123"} handleSubmited={this.handleSubmit} />
+        <FootBallers handleDeleted={this.handleDelete} soccerPlayers={this.state.soccerPlayers} />
+        <AddPlayer   handleSubmited={this.handleSubmit} />
 
       </div>
     );

@@ -18,11 +18,11 @@ return  (<div>
         <option value="Manchester United">Manchester United</option>
         <option value="Juventus">Juventus</option>
         <option value="Real Madrid">Real Madrid</option>
-        <option value="Real Madrid">Chelsea</option>
-        <option value="Real Madrid">Arsenal</option>
-        <option value="Real Madrid">Barcelona</option>
+        <option value="Chelsea">Chelsea</option>
+        <option value="Arsenal">Arsenal</option>
+        <option value="Barcelona">Barcelona</option>
       </select>
-      <button> Add Player </button>
+      <button id='button'> Add Player </button>
     </form>
 
   </div>
