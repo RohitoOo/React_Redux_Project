@@ -10,9 +10,9 @@ function handleSubmit(e){
 return  (<div>
 
     <form onSubmit={handleSubmit}>
-      <input type="text" name="name" placeholder="Soccer Player" />
+      <input type="text" name="name" placeholder="Soccer Player" required/>
       <br/>
-      <input type="text"  name="position" placeholder="Player's Position" />
+      <input type="text"  name="position" placeholder="Player's Position" required/>
       <br/>
       <select id="club" name="club">
         <option value="Manchester United">Manchester United</option>

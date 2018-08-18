@@ -5,7 +5,6 @@ const FootBallers = ({soccerPlayers}) => {
 
   const players = soccerPlayers.map( (player) => {
     return  (
-
         <tr key={player.id}>
             <td >{player.name}</td>
             <td >{player.position}</td>

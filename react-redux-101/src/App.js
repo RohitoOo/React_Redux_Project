@@ -26,10 +26,17 @@ class App extends Component {
     }
 
     var soccerPlayers = this.state.soccerPlayers;
-    soccerPlayers.push(newPlayer)
+    soccerPlayers =  [newPlayer , ...soccerPlayers]
+
     this.setState({
-      soccerPlayers : soccerPlayers
+      soccerPlayers : [...soccerPlayers]
     })
+
+    // Reset form values
+
+    e.target.name.value = "",
+    e.target.position.value = ""
+
   }
 
   render() {
